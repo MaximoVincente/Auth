@@ -18,12 +18,13 @@ public class AuthenticationController {
 
   @Autowired
   SiteUserRepository siteUserRepository;
-
+//Is mapped to the home which returns to the login page
   @GetMapping("/")
   public String getHome(){
     return "login.html";
   }
 
+  //The signup page will let the user create a username, and a hashed password using Bcrypt and 10 rounds og gensalt. Then it will save the user to the database, and redirect the user to home page if signup was succesful.
   @PostMapping("/signup")
   public RedirectView signUp(String userName, String password){
     // hash pw
@@ -36,6 +37,7 @@ public class AuthenticationController {
     return new RedirectView("/");
   }
 
+  //The login route allows the user to login. If the login is correct(username, and password which is Bcrypt), then redirect the user the recipe page, and a secure Session will initiate. Else return the user the home page with the message.
   @PostMapping("/login")
   public RedirectView login(HttpServletRequest request, String userName, String password){
     // Find user by username
