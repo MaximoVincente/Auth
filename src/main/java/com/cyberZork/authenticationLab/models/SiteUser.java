@@ -24,6 +24,7 @@ public class SiteUser {
 //Default constructor
   protected SiteUser(){
   }
+
 //Getters and Setters
   public Long getId() {
     return id;

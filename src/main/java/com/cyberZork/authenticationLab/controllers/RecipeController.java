@@ -15,6 +15,7 @@ public class RecipeController {
 
   @Autowired
   SiteUserRepository siteUserRepository;
+
 //The recipe route will return to recipe page, where it is a secure Session for the user, displaying the user"s username, and the recipes
   @GetMapping("/recipe")
   public String getRecipe(HttpServletRequest request, Model m){

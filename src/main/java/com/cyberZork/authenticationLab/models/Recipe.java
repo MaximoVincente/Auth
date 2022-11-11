@@ -11,6 +11,7 @@ public class Recipe {
   private String name;
   private String description;
 //  private String[] steps;
+
 //The recipe model has a Many to one relationships with the siteUser model
   @ManyToOne
   SiteUser siteUser;
