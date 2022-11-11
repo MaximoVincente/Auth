@@ -18,6 +18,7 @@ public class AuthenticationController {
 
   @Autowired
   SiteUserRepository siteUserRepository;
+
 //Is mapped to the home which returns to the login page
   @GetMapping("/")
   public String getHome(){
